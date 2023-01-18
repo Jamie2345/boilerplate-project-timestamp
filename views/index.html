@@ -1,32 +1,44 @@
 <!DOCTYPE html>
-
 <html>
    <head>
       <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+      <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/850/850960.png" type="image/x-icon"/>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
       <link href="style.css" rel="stylesheet" type="text/css">
    </head>
-
    <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
-    <div class="container">
-      <h3>Example Usage:</h3>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
-
-      <h3>Example Output:</h3>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
-    </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
-      </p>
+    <div class="full-page-container">
+      <header>
+        <h1>Timestamp Microservice</h1>
+      </header>
+      <div class="container">
+        <div class="example-use-container">
+          <h3>Example Usage:</h3>
+          <ul class="examples-lst">
+            <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
+            <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
+          </ul>
+        </div>
+        <div class="example-output-container">
+          <h3>Example Output:</h3>
+          <p>
+            <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+          </p>
+        </div>
+        <div class="try-container">
+          <h2>Try it yourself</h2>
+          <input type="text" class="input-timestamp" id="time-input" placeholder="Enter Timestamp" />
+          <button class="api_send_btn" onclick="requestTimestamp()">Send Request!</button>
+          <div class="output-box">
+            <p id="output-title"></p>
+            <p>
+              <code id="output-code"></code>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="app/app.js">
+  </script>
 </html>
